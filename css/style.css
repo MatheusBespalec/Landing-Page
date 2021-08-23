@@ -1,0 +1,160 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: roboto, tahoma, sans-serif;
+}
+
+html,body{
+	height: 100%;
+	background-color: #40407a;
+}
+
+/*Boot Class*/
+
+.container{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	max-width: 980px;
+	background-color: #2c2c54;
+	padding: 20px 2%;
+	overflow: hidden;
+	-webkit-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.75);
+}
+
+.clear{
+	clear: both;
+}
+
+.line{
+	height: 100%;
+	width: 100%;
+	background-color: #706fd3;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: skewY(-42deg);
+}
+
+input,textarea:focus{
+	outline: 0;
+}
+
+/*Fim Boot Class*/
+
+/*Landing Page*/
+
+img{
+	position: absolute;
+	right: 10px;
+	bottom: 0;
+	width: 48%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+form{
+	width: 52%;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+
+form h2{
+	color: #40407a;
+	font-weight: bold;
+	font-size: 38px;
+	position: relative;
+	text-align: left;
+}
+
+.input-group{
+	position: relative;
+	width: 100%;
+	margin: 18px 0;
+}
+
+.input-group input, 
+.input-group textarea{
+	width: 100%;
+	padding: 6px 0 6px 10px;
+	background-color: transparent;
+	font-size: 16px;
+	color: rgba(255,255,255,0.8);
+	border: 0;
+	border-bottom: 1px solid rgba(255,255,255,0.8);
+}
+
+form input[type=submit]{
+	border: 0;
+	background-color: #474787;
+	padding: 8px 26px;
+	color: rgba(255,255,255,0.8);
+	font-size: 16px;
+	position: relative;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+form input[type=submit]:hover{
+	background-color: #2c2c54;
+}
+
+.input-group input:focus ~ span, 
+.input-group textarea:focus ~ span,
+.input-group input:valid ~ span, 
+.input-group textarea:valid ~ span{
+	top: -10px;
+	left: 0;
+	font-size: 12px;
+	color: rgba(255,255,255,0.8);
+}
+
+.input-group textarea{
+	height: 150px;
+	resize: none;
+}
+
+.input-group span{
+	transition: 0.5s;
+	position: absolute;
+	top: 6px;
+	left: 10px;
+	color: rgba(255,255,255,0.6);
+	pointer-events: none;
+	font-size: 16px;
+}
+
+/*Responsivo*/
+
+@media screen and (max-width: 800px){
+	img{
+		display: none;
+	}
+
+	form{
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	form h2{
+		text-align: center;
+		font-size: 33px;
+	}
+
+	.input-group{
+		position: relative;
+		max-width: 600px;
+		margin: 18px auto;
+	}
+
+	.container{
+		min-width: 100%;
+		min-height: 100vh;
+	}
+}
